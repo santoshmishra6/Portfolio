@@ -1,4 +1,4 @@
-// Typing effect
+// Typing effect (only one block)
 var typing = new Typed(".typing", {
     strings: [
         "BackEnd Developer",
@@ -7,16 +7,16 @@ var typing = new Typed(".typing", {
         "API Builder",
         "Database Designer"
     ],
-    typeSpeed: 200,
-    backSpeed: 100,
+    typeSpeed: 100,
+    backSpeed: 60,
     loop: true
 });
 
-// Show content and conditionally display hover tip
+// Show content and optionally show hover tip
 window.onload = function () {
     document.querySelector('body').style.display = 'block';
 
-    // Check screen size in inches
+    // Optional tip only for larger screens
     var screenWidth = window.innerWidth;
     var screenHeight = window.innerHeight;
     var screenSizeInches = Math.sqrt(
@@ -24,7 +24,6 @@ window.onload = function () {
         Math.pow(screenHeight / window.devicePixelRatio, 2)
     ) / 96;
 
-    // Show cursor tip only on screens 14 inches or larger
     if (screenSizeInches >= 14) {
         alert("Try to move your cursor over the image for a beautiful effect");
     }
