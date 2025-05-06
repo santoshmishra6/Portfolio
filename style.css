@@ -12,12 +12,13 @@ body {
 }
 
 /* Header */
+/* Header */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 5%;
+    padding: 20px 5%; /* Adjusted vertical padding */
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -26,21 +27,21 @@ body {
     flex-wrap: wrap;
 }
 
-/* Logo */
+/* Logo container */
 .logodiv {
-    margin-top: -20px;
-    display: block;
-    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
 }
 
+/* Logo image */
 .logodiv img {
-    cursor: default;
-    border-radius: 20%;
-    margin-top: 10px;
-    max-width: 120px;
-    filter: drop-shadow(0 0 50px #FFDF80);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 20px #FFDF80);
 }
-
 /* Navbar */
 .navbar {
     display: flex;
