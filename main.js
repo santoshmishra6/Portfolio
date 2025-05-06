@@ -1,12 +1,13 @@
 // alert("please try to take your cursur in images");
 
 var typing = new Typed(".typing", {
-
-    strings: ["BackEnd Developer",
+    strings: [
+        "BackEnd Developer",
         "Java Lover",
         "PHP Developer",
         "API Builder",
-        "Database Designer"],
+        "Database Designer"
+    ],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
