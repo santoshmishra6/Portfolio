@@ -7,8 +7,8 @@ var typing = new Typed(".typing", {
         "API Builder",
         "Database Designer"
     ],
-    typeSpeed: 100,
-    backSpeed: 60,
+    typeSpeed: 200,
+    backSpeed: 100,
     loop: true
 });
 
