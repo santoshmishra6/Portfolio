@@ -30,6 +30,7 @@ body {
 .logodiv {
     margin-top: -20px;
     display: block;
+    padding-right: 10px;
 }
 
 .logodiv img {
