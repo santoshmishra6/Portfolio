@@ -191,7 +191,6 @@ body {
     pointer-events: none;
     background: radial-gradient(circle at var (--x) var(--y), transparent 10%, rgba(0, 0, 0, 0.95) 20px);
 } */
-/* Responsive design */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
