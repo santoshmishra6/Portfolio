@@ -2,7 +2,7 @@
 
 var typing = new Typed(".typing", {
 
-    strings: ["FrontEnd Developer", "Web Designer", "Freelancer"],
+    strings: ["Backend Developer", "Web Designer", "Freelancer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
@@ -10,7 +10,25 @@ var typing = new Typed(".typing", {
 
 function checkScreenSize() {
     var screenWidth = window.innerWidth;
-    var screenHeight = window.innerHeight;
+    var screenHeight = window.innerHeight;// Typing effect
+var typing = new Typed(".typing", {
+    strings: ["FrontEnd Developer", "Web Designer", "Freelancer"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});
+
+// Function to show body content on any screen size
+function showContent() {
+    document.querySelector('body').style.display = 'block';
+
+    // Optional: cursor hint for image hover effect
+    alert("Try to move your cursor over the image for a beautiful effect");
+}
+
+// Call on page load
+window.onload = showContent;
+
     var count = 0;
 
     // Calculate the screen size in inches
