@@ -17,27 +17,26 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 5%;
+    padding: 10px 8%;
     background: transparent;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Ensures vertical alignment */
+    align-items: center;
     z-index: 100;
 }
 
 .logodiv {
-    display: flex;
-    align-items: center; /* Aligns image vertically with nav links */
+    margin-top: -31px;
+    display: block;
 }
 
 .logodiv img {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    filter: drop-shadow(0 0 15px #FFDF80);
+    cursor: default;
+    border-radius: 20%;
+    margin-top: 10px;
+    max-width: 150px;
+    filter: drop-shadow( 0 0 50px #FFDF80);
 }
-
 /* Navbar */
 .navbar {
     display: flex;
