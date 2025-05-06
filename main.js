@@ -2,7 +2,11 @@
 
 var typing = new Typed(".typing", {
 
-    strings: ["Backend Developer", "Web Designer", "Freelancer"],
+    strings: ["BackEnd Developer",
+        "Java Lover",
+        "PHP Developer",
+        "API Builder",
+        "Database Designer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
