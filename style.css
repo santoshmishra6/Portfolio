@@ -1,21 +1,21 @@
-/* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-}*/
-* {
-    outline: 1px solid red;
-  }
-  html, body {
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
     background-color: #1f242d;
     color: #fff;
+    display: none;
 }
+
+
+/* .show {
+    display: block;
+} */
+
 .header {
     position: fixed;
     top: 0;
@@ -27,7 +27,6 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    flex-wrap: nowrap;
 }
 
 .logodiv {
@@ -90,8 +89,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 70px 10% 0;
-    flex-direction: row; 
-    flex-wrap: nowrap;
 }
 
 .home-content {
@@ -123,10 +120,9 @@ body {
 }
 
 .home-img img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 0 5px #FFDF80, 0 0 25px wheat;
+    position: relative;
+    max-width: 400px;
+    box-shadow: 0 0 5px #FFDF80, 0 0 25 px wheat;
     /* height: 400px; */
     transition: 0.5s all ease;
     border-radius: 50%;
@@ -184,6 +180,17 @@ body {
     background-color: rgb(113, 235, 237);
     color: #000000;
 }
+
+
+/* .light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at var (--x) var(--y), transparent 10%, rgba(0, 0, 0, 0.95) 20px);
+} */
 .scale-wrapper {
     width: 100%;
     max-width: 1024px;
