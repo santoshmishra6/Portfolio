@@ -183,21 +183,34 @@ body {
     margin: 0 auto;
   }
   .scale-wrapper {
-    width: 100%;
     max-width: 1024px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 20px; /* Optional: for some internal spacing */
-}
-/* Optional: force scroll on small screens (phones, tablets) */
-@media (max-width: 1024px) {
-    html, body {
-      overflow-x: scroll;
+    padding: 0 20px;
+  }  
+  @media (max-width: 768px) {
+    .home {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 60px 5%;
     }
   
-    .scale-wrapper {
-      width: 1024px;
-      min-width: 1024px;
-      margin: 0 auto;
+    .home-content h1 {
+      font-size: 40px;
+    }
+  
+    .home-img {
+      margin-top: 30px;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar a {
+      margin: 10px 0;
     }
   }
   
