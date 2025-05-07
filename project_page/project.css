@@ -144,9 +144,19 @@ body {
     font-size: 150%;
     margin-left: 15px;
 }
-/* .info {
-    height: 50px;
-    width: auto;
-    font-size: 15px;
-    margin-top: 50px;
-} */
+.scale-wrapper {
+    width: 1024px;
+    min-width: 1024px;
+    margin: 0 auto;
+  }
+/* Optional: force scroll on small screens (phones, tablets) */
+@media (max-width: 1024px) {
+  html, body {
+    overflow-x: scroll;
+  }
+
+  .scale-wrapper {
+    width: 1024px;
+    min-width: 1024px;
+  }
+}
