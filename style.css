@@ -177,7 +177,12 @@ body {
     background-color: rgb(113, 235, 237);
     color: #000000;
 }
-
+#fixed-container {
+    width: 1024px;
+    min-width: 1024px;
+    margin: 0 auto;
+  }
+  
 /* Optional: force scroll on small screens (phones, tablets) */
 @media (max-width: 1024px) {
   html, body {
