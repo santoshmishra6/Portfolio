@@ -116,8 +116,9 @@ body {
 }
 
 .home-img img {
-    position: relative;
+    width: 100%;
     max-width: 400px;
+    height: auto;
     box-shadow: 0 0 5px #FFDF80, 0 0 25 px wheat;
     /* height: 400px; */
     transition: 0.5s all ease;
@@ -182,19 +183,21 @@ body {
     margin: 0 auto;
   }
   .scale-wrapper {
-    width: 1024px;
-    min-width: 1024px;
+    width: 100%;
+    max-width: 1024px;
     margin: 0 auto;
-  }
+    padding: 0 20px; /* Optional: for some internal spacing */
+}
 /* Optional: force scroll on small screens (phones, tablets) */
 @media (max-width: 1024px) {
-  html, body {
-    overflow-x: scroll;
+    html, body {
+      overflow-x: scroll;
+    }
+  
+    .scale-wrapper {
+      width: 1024px;
+      min-width: 1024px;
+      margin: 0 auto;
+    }
   }
-
-  .scale-wrapper {
-    width: 1024px;
-    min-width: 1024px;
-    margin: 0 auto;
-  }
-}
+  
