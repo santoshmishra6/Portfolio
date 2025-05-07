@@ -192,5 +192,6 @@ body {
   .scale-wrapper {
     width: 1024px;
     min-width: 1024px;
+    margin: 0 auto;
   }
 }
