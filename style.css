@@ -10,12 +10,6 @@ body {
     color: #fff;
     display: none;
 }
-
-
-/* .show {
-    display: block;
-} */
-
 .header {
     position: fixed;
     top: 0;
@@ -184,92 +178,28 @@ body {
     color: #000000;
 }
 
-/* Responsive Styles */
+.scale-wrapper {
+  transform-origin: top left;
+}
+
+/* Scale down on smaller screens */
 @media (max-width: 1024px) {
-  .home {
-      flex-direction: column;
-      text-align: center;
-      padding: 120px 5% 50px;
-  }
-
-  .home-content {
-      max-width: 100%;
-  }
-
-  .home-img img {
-      max-width: 300px;
-      margin-top: 30px;
-      opacity: 1;
-      visibility: visible;
+  .scale-wrapper {
+    transform: scale(0.8);
+    width: 125%;
   }
 }
 
 @media (max-width: 768px) {
-  .header {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 20px 5%;
-  }
-
-  .navbar {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-top: 20px;
-  }
-
-  .navbar a {
-      margin: 10px 0;
-      font-size: 16px;
-  }
-
-  .home-content h1 {
-      font-size: 42px;
-  }
-
-  .home-content h3 {
-      font-size: 24px;
-  }
-
-  .home-content p {
-      font-size: 14px;
-  }
-
-  .btn {
-      padding: 10px 24px;
-      font-size: 14px;
+  .scale-wrapper {
+    transform: scale(0.6);
+    width: 167%;
   }
 }
 
 @media (max-width: 480px) {
-  .logodiv img {
-      max-width: 100px;
-  }
-
-  .home-content h1 {
-      font-size: 32px;
-  }
-
-  .home-content h3 {
-      font-size: 20px;
-  }
-
-  .home-content p {
-      font-size: 13px;
-  }
-
-  .btn {
-      font-size: 13px;
-      padding: 8px 20px;
-  }
-
-  .social-media a {
-      width: 35px;
-      height: 35px;
-      font-size: 18px;
-  }
-
-  .home-img img {
-      max-width: 250px;
+  .scale-wrapper {
+    transform: scale(0.5);
+    width: 200%;
   }
 }
