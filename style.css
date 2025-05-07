@@ -179,27 +179,19 @@ body {
 }
 
 .scale-wrapper {
-  transform-origin: top left;
+  width: 1024px;
+  min-width: 1024px;
+  margin: 0 auto;
 }
 
-/* Scale down on smaller screens */
+/* Optional: force scroll on small screens (phones, tablets) */
 @media (max-width: 1024px) {
-  .scale-wrapper {
-    transform: scale(0.8);
-    width: 125%;
+  html, body {
+    overflow-x: scroll;
   }
-}
 
-@media (max-width: 768px) {
   .scale-wrapper {
-    transform: scale(0.6);
-    width: 167%;
-  }
-}
-
-@media (max-width: 480px) {
-  .scale-wrapper {
-    transform: scale(0.5);
-    width: 200%;
+    width: 1024px;
+    min-width: 1024px;
   }
 }
