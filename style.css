@@ -27,6 +27,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    flex-wrap: nowrap;
 }
 
 .logodiv {
@@ -89,6 +90,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 70px 10% 0;
+    flex-direction: row; 
+    flex-wrap: nowrap;
 }
 
 .home-content {
