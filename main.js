@@ -28,3 +28,6 @@ window.onload = function () {
         alert("Try to move your cursor over the image for a beautiful effect");
     }
 };
+    window.onload = function() {
+        alert("If you want to see the image clearly, click the image.");
+      };
