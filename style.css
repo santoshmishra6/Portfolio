@@ -182,7 +182,11 @@ body {
     min-width: 1024px;
     margin: 0 auto;
   }
-  
+  .scale-wrapper {
+    width: 1024px;
+    min-width: 1024px;
+    margin: 0 auto;
+  }
 /* Optional: force scroll on small screens (phones, tablets) */
 @media (max-width: 1024px) {
   html, body {
