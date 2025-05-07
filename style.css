@@ -8,8 +8,9 @@
 body {
     background-color: #1f242d;
     color: #fff;
-    display: none;
+    display: block;  /* Ensure the body is visible */
 }
+
 .header {
     position: fixed;
     top: 0;
@@ -30,13 +31,10 @@ body {
 
 .logodiv img {
     cursor: default;
-    /* mix-blend-mode: color-burn; */
     border-radius: 20%;
     margin-top: 10px;
-    /* box-shadow: 0 0 50px #FFDF80; */
     max-width: 150px;
-    filter: drop-shadow( 0 0 50px #FFDF80);
-    /* object-fit: contain; */
+    filter: drop-shadow(0 0 50px #FFDF80);
 }
 
 .navbar a {
@@ -91,7 +89,7 @@ body {
 
 .home-content h3 {
     font-size: 32px;
-    font-weight: 700px;
+    font-weight: 700;
 }
 
 .home-content h3:nth-of-type(20) {
@@ -104,7 +102,7 @@ body {
 
 .home-content h1 {
     font-size: 56px;
-    font-weight: 700px;
+    font-weight: 700;
     margin: -3px 0;
 }
 
@@ -116,21 +114,16 @@ body {
 .home-img img {
     position: relative;
     max-width: 400px;
-    box-shadow: 0 0 5px #FFDF80, 0 0 25px wheat; 
-    transition: 0.5s all ease;
+    box-shadow: 0 0 5px #FFDF80, 0 0 25px wheat;
+    transition: visibility 0s, opacity 0.5s, all 0.5s ease;
     border-radius: 50%;
-    /* visibility: hidden; */
-    /* Initially hidden */
     opacity: 0.3;
-    /* Initially at 30-40% opacity */
-    transition: visibility 0s, opacity 0.5s;
 }
 
 .home-img img:hover {
     box-shadow: 0 0 5px #FFDF80, 0 0 25px wheat, 0 0 50px #FFDF80, 0 0 100px wheat, 0 0 200px wheat;
     visibility: visible;
-    /* Visible on hover */
-    opacity: 1
+    opacity: 1;
 }
 
 .social-media a {
@@ -174,39 +167,29 @@ body {
     color: #000000;
 }
 
-
-/* .light {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: radial-gradient(circle at var (--x) var(--y), transparent 10%, rgba(0, 0, 0, 0.95) 20px);
-} */
 .scale-wrapper {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 20px;
-  }
-  @media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
     .scale-wrapper {
-      padding: 0 10px;
+        padding: 0 10px;
     }
-  
+
     .home {
-      flex-direction: column;
-      padding: 120px 5% 20px;
-      text-align: center;
+        flex-direction: column;
+        padding: 120px 5% 20px;
+        text-align: center;
     }
-  
+
     .home-img {
-      margin-top: 20px;
+        margin-top: 20px;
     }
-  
+
     .home-img img {
-      width: 70%;
+        width: 70%;
     }
-  }
-  
+}
