@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <link rel="icon" href="/resources/myimg.png" type="image/icon type" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+    }
+
+    body {
+      background-color: #1f242d;
+      color: #fff;
+      padding-top: 90px;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 8%;
+      background: #0d1117;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .logodiv img {
+      border-radius: 20%;
+      max-width: 80px;
+      filter: drop-shadow(0 0 30px #ffdf80);
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      transition: max-height 0.3s ease;
+    }
+
+    .navbar a {
+      position: relative;
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 25px;
+      padding: 6px;
+      transition: 0.5s;
+    }
+
+    .navbar a span {
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ffdf80;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar a:hover,
+    .navbar a#aboutpage {
+      color: #ffdf80;
+    }
+
+    .navbar a:hover span {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      border-radius: 2px;
+    }
+
+    .aboutme-banner {
+      text-align: center;
+      font-size: 2rem;
+      color: #ffdf80;
+      text-shadow: 0 0 10px #ffdf80;
+      margin-bottom: 30px;
+    }
+
+    .home-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+    }
+
+    .home-img img {
+      max-width: 300px;
+      margin: 20px;
+      border-radius: 50%;
+      opacity: 0.4;
+      transition: all 0.5s ease;
+      box-shadow: 0 0 10px #ffdf80;
+    }
+
+    .home-img img:hover {
+      opacity: 1;
+      filter: drop-shadow(0 0 200px #ffdf80);
+    }
+
+    .text {
+      max-width: 600px;
+      margin: 20px;
+    }
+
+    .text p {
+      color: #ffdf80;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        flex-direction: column;
+        background-color: #222;
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      .navbar.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .aboutme-banner {
+        font-size: 1.6rem;
+        margin-top: 100px;
+      }
+
+      .home-img {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .text {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logodiv">
+      <img src="/resources/logo.jpg" alt="Logo" />
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <a href="/index.html">Home<span></span></a>
+      <a id="aboutpage" href="/about page/about.html">About<span></span></a>
+      <a href="/Education page/education.html">Education<span></span></a>
+      <a href="/project page/project.html">Project<span></span></a>
+      <a href="/skill page/skill.html">Skill<span></span></a>
+    </nav>
+  </header>
+
+  <p class="aboutme-banner" style="margin-top: -40px;">About Me</p>
+
+  <div class="home-img" style="text-align: justify;">
+    <img src="/resources/profile.jpg" alt="Santosh's Image" style=" margin: -40px;"/>
+    <div class="text">
+      <p style=" margin-top: 42px;">
+        Hi, I’m Santosh Kumar Mishra, an MCA student at GIFT College, currently placed at Surya International Private Limited. My journey into tech began with learning C programming, and I later completed an internship in Java, which solidified my interest in software development.
+      </p>
+      <p>
+        Now, I’m diving deep into web development, working with technologies like HTML, CSS, JavaScript, Bootstrap, and React.js. Each day is a new opportunity to build, experiment, and grow as a developer.
+      </p>
+      <p>
+        When I’m not coding, I enjoy exploring ideas, solving problems, and keeping up with the fast-paced world of technology. My portfolio is a reflection of my dedication, curiosity, and continuous learning mindset.
+      </p>
+      <p>
+        Let’s connect as I navigate and contribute to the dynamic world of web development!
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Santosh Kumar Mishra. All Rights Reserved.</p>
+    <p>Made with ❤️ by Santosh Kumar Mishra</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navbar");
+      nav.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
