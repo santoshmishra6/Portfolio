@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Projects</title>
+  <title>My Education</title>
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
-  <link rel="icon" href="/resources/myimg.png" type="image/icon type" />
+  <link rel="icon" href="resources/myimg.png" type="image/icon type" />
   <style>
     * {
       margin: 0;
@@ -17,6 +18,9 @@
     body {
       background-color: #1f242d;
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .scale-wrapper {
@@ -24,6 +28,7 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
+      flex: 1;
     }
 
     .header {
@@ -76,11 +81,12 @@
       transition: background 0.3s;
     }
 
-    .menu a:hover {
+    .menu a:hover,
+    .menu a.active {
       background-color: #444;
     }
 
-    .maindiv {
+    .education-section {
       margin-top: 100px;
       display: flex;
       justify-content: space-evenly;
@@ -93,41 +99,36 @@
       min-width: 280px;
       border: 2px solid beige;
       border-radius: 20px;
-      padding: 10px;
+      padding: 20px;
       transition: box-shadow 0.3s;
+      background-color: #292f3d;
     }
 
     .childdiv:hover {
       box-shadow: 0 0 30px #FFDF80;
     }
 
-    .childdiv .projectimage {
-      border: 2px solid snow;
-      height: 200px;
-      width: 100%;
-      border-radius: 15px;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .projectimage img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: cover;
-    }
-
-    .childdiv .github {
-      color: #FFDF80;
-      font-size: 24px;
-    }
-
-    .childdiv p,
-    .heading {
-      color: #FFDF80;
+    .childdiv h3 {
       text-align: center;
-      margin: 10px 0;
+      margin-bottom: 15px;
+      color: #FFDF80;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .childdiv p {
+      color: #ddd;
+      font-size: 15px;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #aaa;
+      font-size: 0.9rem;
     }
 
     /* Responsive Styles */
@@ -151,11 +152,7 @@
         display: flex;
       }
 
-      .header {
-        padding: 10px;
-      }
-
-      .maindiv {
+      .education-section {
         flex-direction: column;
         align-items: center;
       }
@@ -163,14 +160,20 @@
       .childdiv {
         width: 90%;
       }
+
+      footer {
+        font-size: 0.8rem;
+        padding: 15px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="scale-wrapper">
     <header class="header">
       <div class="logodiv">
-        <img src="../resources/logo.png" alt="Logo" />
+        <img src="resources/logo.jpg" alt="Logo" />
       </div>
 
       <div class="hamburger" onclick="toggleMenu()">
@@ -180,46 +183,41 @@
       </div>
 
       <nav class="menu" id="menu">
-        <a href="/index.html">Home</a>
-        <a href="/about page/about.html">About</a>
-        <a href="/Education page/education.html">Education</a>
-        <a href="/project page/project.html">Project</a>
-        <a href="/skill page/skill.html">Skill</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#" class="active">Education</a>
+        <a href="project.html">Project</a>
+        <a href="skill.html">Skill</a>
       </nav>
     </header>
 
-    <div class="maindiv">
+    <div class="education-section">
       <div class="childdiv">
-        <a class="github" href="#"><i class='bx bxl-github'></i></a>
-        <p>Project 1</p>
-        <hr />
-        <h5 class="heading">Education Mentor System</h5>
-        <div class="projectimage">
-          <img src="/resources/edu_mentor_system.png" alt="Project 1" />
-        </div>
+        <h3>Class 10</h3>
+        <p>In 2018, I completed my studies at Brahmanpal Baharbil High School with 62%. While my marks were modest, that period was truly formative — it shaped my discipline, resilience, and sparked a genuine curiosity for learning beyond the classroom.</p>
       </div>
 
       <div class="childdiv">
-        <a class="github" href="#"><i class='bx bxl-github'></i></a>
-        <p>Project 2</p>
-        <hr />
-        <h5 class="heading">Job Portal</h5>
-        <div class="projectimage">
-          <img src="/resources/jobportal.png" alt="Project 2" />
-        </div>
+        <h3>Class 12</h3>
+        <p>In 2020, I completed my studies at Indira Gandhi Memorial College with 43%. Although it was a challenging period, it taught me resilience and the importance of staying committed to my goals, regardless of setbacks.</p>
       </div>
 
       <div class="childdiv">
-        <a class="github" href="#"><i class='bx bxl-github'></i></a>
-        <p>Project 3</p>
-        <hr />
-        <h5 class="heading">Food Management System</h5>
-        <div class="projectimage">
-          <img src="/resources/food_management.jpg" alt="Project 3" />
-        </div>
+        <h3>Graduation</h3>
+        <p>I completed my BSc from Regional Degree College, Rambag, in 2023 with 80% marks. Although the course wasn’t focused on technology, during my studies I developed a strong passion for tech that drives me to learn and grow in this field.</p>
+      </div>
+
+      <div class="childdiv">
+        <h3>Post graduation</h3>
+        <p>I’m currently deepening my knowledge of computer science at GIFT, pursuing my Master’s in Computer Applications (MCA) with an expected graduation in 2025. This program is a crucial step in my journey, helping me build advanced skills and prepare for the exciting challenges of the tech industry.</p>
       </div>
     </div>
   </div>
+
+  <footer>
+    <p>&copy; 2025 Santosh Kumar Mishra. All Rights Reserved.</p>
+    <p>Made with ❤️ by Santosh Kumar Mishra</p>
+  </footer>
 
   <script>
     function toggleMenu() {
@@ -227,4 +225,5 @@
     }
   </script>
 </body>
+
 </html>
