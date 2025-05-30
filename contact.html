@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Santosh Kumar Mishra</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"/>
+  <link rel="icon" href="/resources/myimg.png" type="image/icon type"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #1f242d;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .scale-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      z-index: 1000;
+    }
+
+    .logodiv img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      filter: drop-shadow(0 0 10px #FFDF80);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 100%;
+      background-color: white;
+      border-radius: 2px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: #444;
+    }
+
+    .main-content {
+      margin-top: 100px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ffdf80;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      color: #aaa;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .contact-box {
+      max-width: 600px;
+      margin: auto;
+      background: #2c303a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 223, 128, 0.1);
+    }
+
+    .contact-item {
+      margin-bottom: 20px;
+    }
+
+    .contact-item i {
+      color: #ffdf80;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .contact-item span {
+      font-size: 16px;
+      vertical-align: middle;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .main-content {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .contact-box {
+        padding: 20px;
+      }
+
+      footer {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scale-wrapper">
+    <!-- Header / Navbar -->
+    <header class="header">
+      <div class="logodiv">
+        <img src="/resources/logo.png" alt="Logo" />
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="menu" id="menu">
+        <a href="/index.html">Home</a>
+        <a href="/about page/about.html">About</a>
+        <a href="/Education page/education.html">Education</a>
+        <a href="/project page/project.html">Project</a>
+        <a href="/skill page/skill.html">Skill</a>
+      </nav>
+    </header>
+
+    <!-- Contact Info -->
+    <div class="main-content">
+      <h1>Contact Details</h1>
+      <p class="subtitle">Here’s how you can get in touch with me</p>
+
+      <div class="contact-box">
+        <div class="contact-item">
+          <i class='bx bxs-user'></i>
+          <span>Santosh Kumar Mishra</span>
+        </div>
+        <div class="contact-item">
+          <i class='bx bxs-envelope'></i>
+          <span>santoshmishra.official@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <i class='bx bxs-phone-call'></i>
+          <span>+91 9861020771</span>
+        </div>
+        <div class="contact-item">
+          <i class='bx bxs-map'></i>
+          <span>Bhubaneswar, Odisha, India</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Santosh Kumar Mishra. All Rights Reserved.</p>
+      <p>Made with ❤️ by Santosh Kumar Mishra</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
